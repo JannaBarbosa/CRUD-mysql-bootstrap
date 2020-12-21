@@ -2,8 +2,11 @@
 include 'conexao.php';
 include 'script/password.php';
 
+
 $usuario = $_POST['usuario'];
 $senha1 = $_POST['senha'];
+
+
 
 $sql = "SELECT  `emailusuario`,`senhausuario` FROM `usuarios` WHERE emailusuario = '$usuario' and status='Ativo'";
 $buscar = mysqli_query($conexao,$sql);	
